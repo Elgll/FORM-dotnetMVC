@@ -1,0 +1,27 @@
+﻿@model Prenotazione;  
+
+@{
+    ViewData["Title"] = "Conferma";
+}
+ <h1 class="display-4">Prenotazione avvenuta con successo</h1>
+   @if( Model != null)
+            {
+                <div class="text-centre">
+                    <p> La tua prenotazione a nome @Model.Nome</p>
+                    
+                    <p>cognome @Model.Cognome</p> 
+                    
+                    <p>Email @Model.Email </p>
+                    
+                    <p> In data @Model.Data</p>
+                    
+                    <p>sesso @Model._Sesso</p>
+                    
+                    <p>ruolo @Model._Ruolo</p>
+           
+                </div>
+            }
+        else{
+            <h3 class="display-4">Si è verificato un errore</h3>
+            <p> sei un div</p>
+        }

@@ -1,0 +1,50 @@
+﻿@model Prenotazione; 
+
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <br>
+    <h1 class="display-4">Inserisci i tuoi dati per prenotare</h1>
+    <form class="m-2" method="post" asp-action="Conferma">
+        <div class="form-group">
+            <label asp-for="Nome">Il tuo nome:</label>
+            <input required asp-for="Nome" class="form-control" type="text"> 
+        </div>
+         <div class="form-group">
+            <label asp-for="Cognome">Il tuo cognome:</label>
+            <input required  asp-for="Cognome" class="form-control" type="text"> 
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">La tua Email:</label>
+            <input required  asp-for="Email" class="form-control"  type="email">
+        </div>
+         <div class="form-group">
+            <label asp-for="Data">La data di oggi:</label>
+            <input required  asp-for="Data" class="form-control" type="date">
+        </div>
+         <div class="form-group">
+            <label asp-for="_Sesso">Il tuo sesso:</label>
+            <br>
+            <input type="radio" id="html" name="fav_language" value="Maschio">
+            <label for="html">Maschio</label><br>
+             <input type="radio" id="html" name="fav_language" value="Femmina">
+            <label for="html">Femmina</label><br>
+             <input type="radio" id="html" name="fav_language" value="NonSpecificato">
+            <label for="html">Non specificato</label><br>
+        </div>
+        <div class="form-group">
+            <label asp-for="_Ruolo">Il tuo ruolo:</label>
+            <select required>
+                <option value="Insegnante">Insegnante</option>
+                <option value="Studente">Studente</option>
+                <option value="Genitore">Genitore</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn_primary w-25 mb-2">Prenota</button>
+       
+    </form>      
+</div>
